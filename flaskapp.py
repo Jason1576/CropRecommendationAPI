@@ -12,6 +12,8 @@ import joblib
 import os
 import urllib.request  # For optional remote model loading
 import numpy as np
+import warnings
+from sklearn.exceptions import DataConversionWarning
 
 app = Flask(__name__)
 
