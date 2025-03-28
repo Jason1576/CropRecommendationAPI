@@ -44,6 +44,8 @@ else:
         scaler = joblib.load(SCALER_PATH)
     except Exception as e:
         raise RuntimeError(f"Failed to load scaler: {str(e)}")
+        
+warnings.filterwarnings("ignore", category=DataConversionWarning)
 
 @app.route('/predict', methods=['POST'])
 def predict():
